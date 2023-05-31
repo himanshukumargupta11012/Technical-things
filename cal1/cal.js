@@ -43,6 +43,26 @@ let output = document.getElementById("console");
                 fact();
             }
         })
-        // if(output.value[output.value.length-1] !='1'||'2'||'3'||'4'||'5'||'6'||'7'||'8'||'9'||'0'||'+'||'-'||'%'||'*'||'/'||'.'||' ') alert("Don't use characters");
+        //  if(output.value[output.value.length-1] !='1'||'2'||'3'||'4'||'5'||'6'||'7'||'8'||'9'||'0'||'+'||'-'|'%'||'*'||'/'||'.'||'') alert("Don't use characters");
      
+    console.log(output.value[output.value.length-1])
+
+    if(output.value[output.value.length-2]=="+"&&output.value[output.value.length-1]=="+")alert("Don't use characters");
+    console.log(output.value[output.value.length-1])
+    console.log(output.value[output.value.length-2])
+    setInterval(function(){ if((output.value[output.value.length-2]=="+"||output.value[output.value.length-2]=="-"||output.value[output.value.length-2]=="*"||output.value[output.value.length-2]=="%"||output.value[output.value.length-2]=="/")
+     && (output.value[output.value.length-1]=="+"||output.value[output.value.length-1]=="-"||output.value[output.value.length-1]=="*"||output.value[output.value.length-1]=="/"||output.value[output.value.length-1]=="%")) {alert("Syntax error");
+    output.value = output.value.slice(0, -1);}
+
+    if(output.value[output.value.length-1] !='1'&&output.value[output.value.length-1] !='2'&&output.value[output.value.length-1] !='3'&&output.value[output.value.length-1] !='4'&&output.value[output.value.length-1] !='5'
+    &&output.value[output.value.length-1] !='6'&&output.value[output.value.length-1] !='7'&&output.value[output.value.length-1] !='8'&&output.value[output.value.length-1] !='9'&&output.value[output.value.length-1] !='0'
+    &&output.value[output.value.length-1] !='+'&&output.value[output.value.length-1] !='-'&&output.value[output.value.length-1] !='%'&&output.value[output.value.length-1] !='*'&&output.value[output.value.length-1] !='/'
+    &&output.value[output.value.length-1] !='.'&&output.value[output.value.length-1] !=''&&output.value[output.value.length-1] !=undefined) {alert("Don't use characters");
+
     
+    output.value = output.value.slice(0, -1);}
+
+
+},0);
+
+console.log(output.value[output.value.length-1])
